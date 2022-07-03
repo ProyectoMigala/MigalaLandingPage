@@ -48,7 +48,7 @@ const AboutUsPage = () => {
 
       <section className="about-us-wrapper">
 
-        <span className="section-title">Nosotrxs</span>
+        <span className="migala-section-title">Nosotrxs</span>
 
         <TabsSection items={tabs} onTabClicked={onTabClicked}/>
 
