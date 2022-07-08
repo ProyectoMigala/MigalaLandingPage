@@ -1,3 +1,5 @@
+import {MigalaMainButton} from "../general/MigalaMainButton";
+
 type MinimalGalleryProps = {
   images: Array<string>,
   showFullGallery: () => void
@@ -11,12 +13,8 @@ const MinimalGallery = ({images, showFullGallery}: MinimalGalleryProps) => {
 
       <div className="main-container">
 
-        <div
-          className="button-show-all-gallery"
-          onClick={() => showFullGallery()}
-        >
-          <span>Galeria completa</span>
-        </div>
+
+        <MigalaMainButton title="Galeria completa" onClick={showFullGallery}/>
 
         <div className="gallery-wrapper">
           {images.map((item, index) => (
@@ -38,23 +36,6 @@ const MinimalGallery = ({images, showFullGallery}: MinimalGalleryProps) => {
           flex-flow: column;
           align-items: center;
           gap: 20px;
-        }
-
-        .button-show-all-gallery {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          cursor: pointer;
-          background-color: #7e2099;
-          width: 250px;
-          border-radius: 30px;
-          padding: 15px;
-        }
-
-        .button-show-all-gallery > span {
-          color: white;
-          font-weight: bold;
-          font-size: calc(12px + 1vmin);
         }
 
         .gallery-wrapper {

@@ -34,3 +34,23 @@ a {
     top: 0;
     width: 100%;
 }
+
+.migala-section-title {
+    font-size: calc(20px + 3vmin);
+    font-weight: bold;
+    color: black;
+    padding: 10px 0;
+}
+
+
+.migala-section-subtitle {
+    font-size: calc(16px + 1vmin);
+    font-weight: bold;
+    color: black;
+}
+
+
+.migala-regular-text {
+    font-size: calc(12px + 1vmin);
+    color: #918e8e;
+}
