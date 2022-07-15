@@ -4,6 +4,7 @@ import NavBar from "../components/NavBar";
 import Script from 'next/script'
 import AboutUsPage from "./about_us/AboutUsPage";
 import ActivitiesPage from "./activities/ActivitiesPage";
+import ProjectsPage from "./projects/ProjectsPage";
 
 //El componente start es el que tiene el primer layout de la landing
 
@@ -25,6 +26,7 @@ const Home: NextPage = () => {
       <Start/>
       <AboutUsPage/>
       <ActivitiesPage />
+      <ProjectsPage />
 
       <Script src="https://code.jquery.com/jquery-2.1.3.min.js" />
       <Script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
