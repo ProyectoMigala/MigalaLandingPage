@@ -6,7 +6,7 @@ const ProjectsPage = () => {
               {id: 4, name: 'proyecto 4', description: '44 descripcion lorem ipsum dolere apsum', img: 'Imagen'}]
   return (
     <div className="row m-sm-3 m-xl-5">
-      <h3 className="d-flex justify-content-center">Proyectos</h3>
+      <h3 className="d-flex justify-content-center migala-section-title">Proyectos</h3>
       <div className="d-flex flex-wrap">
         {projects.map((project) => (
           <div className="col m-2">
