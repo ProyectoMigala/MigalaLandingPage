@@ -1,13 +1,15 @@
-import TabsSection, {TabItem} from "../../components/about_us/TabsSection";
+import TabsSection, { TabItem } from "../../components/about_us/TabsSection";
 import AboutUsDescription from "../../components/about_us/AboutUsDescription";
 import OrganizationChart from "../../components/about_us/OrganizationChart";
 import MinimalGallery from "../../components/about_us/MinimalGallery";
-import {useState} from "react";
+import { useState } from "react";
+import getGoogleSheetData from "../../services/google_sheet"
+import getGoogleDriveData from "../../services/google_drive"
 
 let tabsDefault: Array<TabItem> = [
-  {title: "Quienes somos", keyCode: "TAB1", isActive: true},
-  {title: "Organigrama", keyCode: "TAB2", isActive: false},
-  {title: "Movimientos locales", keyCode: "TAB3", isActive: false}
+  { title: "Quienes somos", keyCode: "TAB1", isActive: true },
+  { title: "Organigrama", keyCode: "TAB2", isActive: false },
+  { title: "Movimientos locales", keyCode: "TAB3", isActive: false }
 ]
 let minimalGallery: Array<string> = [
   "https://picsum.photos/200/300?random=1",
@@ -21,6 +23,15 @@ let minimalGallery: Array<string> = [
 ]
 
 const AboutUsPage = () => {
+
+  let res = getGoogleSheetData()
+  console.log(res)
+
+  let r = getGoogleDriveData()
+  console.log(r)
+  r.then((data) => {
+    console.log(data)
+  })
 
   const [tabs, setTabs] = useState(tabsDefault)
   const [tabKeyCodeSelected, setTabKeyCodeSelected] = useState("TAB1")
@@ -50,26 +61,26 @@ const AboutUsPage = () => {
 
         <span className="migala-section-title">Nosotrxs</span>
 
-        <TabsSection items={tabs} onTabClicked={onTabClicked}/>
+        <TabsSection items={tabs} onTabClicked={onTabClicked} />
 
         <div className="tabs-content">
           {/*TODO: Change by correct text "*/}
           {tabKeyCodeSelected == "TAB1" && <AboutUsDescription
-              description={`
+            description={`
               Esta deberia ser la descripción Esta deberia ser la descripción Esta deberia ser la descripción
               Esta deberia ser la descripción Esta deberia ser la descripción Esta deberia ser la descripción
               Esta deberia ser la descripción Esta deberia ser la descripción Esta deberia ser la descripción
               Esta deberia ser la descripción Esta deberia ser la descripción Esta deberia ser la descripción
               Esta deberia ser la descripción Esta deberia ser la descripción Esta deberia ser la descripción
-          `}/>
+          `} />
           }
           {/*TODO: Change by correct chart "*/}
           {tabKeyCodeSelected == "TAB2" && <OrganizationChart
-              chart={"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Forganigrama.rocks%2Fwp-content%2Fuploads%2F2019%2F05%2Fempresa.jpg&f=1&nofb=1"}
+            chart={"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Forganigrama.rocks%2Fwp-content%2Fuploads%2F2019%2F05%2Fempresa.jpg&f=1&nofb=1"}
           />}
           {tabKeyCodeSelected == "TAB3" && <MinimalGallery
-              images={minimalGallery}
-              showFullGallery={showFullGallery}
+            images={minimalGallery}
+            showFullGallery={showFullGallery}
           />}
         </div>
 
