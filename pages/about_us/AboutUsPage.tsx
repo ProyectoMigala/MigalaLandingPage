@@ -96,13 +96,6 @@ const AboutUsPage = () => {
           padding: 20px;
         }
 
-        .section-title {
-          font-size: calc(20px + 3vmin);
-          font-weight: bold;
-          color: black;
-          padding: 10px 0;
-        }
-
         .tabs-content {
           display: flex;
           justify-content: center;
