@@ -27,8 +27,8 @@ const Home: NextPage = () => {
       <Start/>
       <AboutUsPage/>
       <ActivitiesPage />
-      <FilesPage />
       <ProjectsPage />
+      <FilesPage />
 
       <Script src="https://code.jquery.com/jquery-2.1.3.min.js" />
       <Script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
