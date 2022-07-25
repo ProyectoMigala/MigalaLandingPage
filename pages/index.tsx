@@ -5,6 +5,7 @@ import Script from 'next/script'
 import AboutUsPage from "./about_us/AboutUsPage";
 import ActivitiesPage from "./activities/ActivitiesPage";
 import ProjectsPage from "./projects/ProjectsPage";
+import FilesPage from "./files/FilesPage";
 
 //El componente start es el que tiene el primer layout de la landing
 
@@ -26,6 +27,7 @@ const Home: NextPage = () => {
       <Start/>
       <AboutUsPage/>
       <ActivitiesPage />
+      <FilesPage />
       <ProjectsPage />
 
       <Script src="https://code.jquery.com/jquery-2.1.3.min.js" />
